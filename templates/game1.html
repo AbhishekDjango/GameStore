@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <meta name="viewport" content="width=1280" />
+  <title>Mario Maker</title>
+  <link rel="stylesheet" type="text/css" href="{%static 'css/game1/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{%static 'css/game1/reset.css' %}">
+</head>
+
+<body>
+
+  <!-- main game -->
+  <div class="main-wrapper">
+    <canvas class="game-screen"></canvas>
+  </div>
+
+  <script src="{%static 'js/game1/View.js' %}"></script>
+  <script src="{%static 'js/game1/GameUI.js' %}"></script>
+
+  <script src="{%static 'js/game1/mainGame/GameSound.js' %}"></script>
+  <script src="{%static 'js/game1/mainGame/Element.js' %}"></script>
+  <script src="{%static 'js/game1/mainGame/PowerUp.js' %}"></script>
+  <script src="{%static 'js/game1/mainGame/Enemy.js' %}"></script>
+  <script src="{%static 'js/game1/mainGame/Bullet.js' %}"></script>
+  <script src="{%static 'js/game1/mainGame/Mario.js' %}"></script>
+  <script src="{%static 'js/game1/mainGame/Score.js' %}"></script>
+  <script src="{%static 'js/game1/mainGame/MarioGame.js' %}"></script>
+
+  <script src="{%static 'js/game1/levelEditor/Storage.js' %}"></script>
+  <script src="{%static 'js/game1/levelEditor/Editor.js' %}"></script>
+  <script src="{%static 'js/game1/levelEditor/CreatedLevels.js' %}"></script>
+
+  <script src="{%static 'js/game1/MarioMaker.js' %}"></script>
+
+  <script src="/static/js/game1/Preloader.js"></script>
+
+</body>
+
+</html>

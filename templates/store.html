@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{%static 'css/sty.css'%}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    /* .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } */
+    span {
+      display: inline-block;
+    }
+
+    .xyz {
+      display: inline-block;
+      position: absolute;
+      font-size: larger;
+      font-family: cursive;
+      font-style: italic;
+      /* font-weight: 5000px; */
+    }
+
+    .sub-menu-wrap {
+      position: absolute;
+      top: 100%;
+      right: 10%;
+      width: 280px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 0.5s;
+    }
+
+    .sub-menu-wrap.open-menu {
+      max-height: 400px;
+    }
+
+    .sub-menu {
+      padding: 30px;
+      margin: 10px;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-info h3 {
+      font-weight: 500;
+    }
+
+    .user-info img {
+      width: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .sub-menu hr {
+      border: 0;
+      height: 1px;
+      width: 200px;
+      background: #ccc;
+      margin: 15px 0 10px;
+    }
+
+    .sub-menu-link span {
+      transition: transform 0.5s;
+    }
+
+    .sub-menu-link:hover span {
+      transform: translateX(5px);
+    }
+
+    .sub-menu-link:hover span {
+      font-weight: 600;
+    }
+  </style>
+
+  <title>store</title>
+</head>
+
+<body>
+  <header class="header active" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="{%static 'images/logo.svg'%}" width="110" height="53" alt="unigine home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="{% url 'home' %}" class="btn" data-nav-link>home</a>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <a href="#tournament" class="navbar-link" data-nav-link>tournament</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#news" class="navbar-link" data-nav-link>news</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>contact</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#store" class="btn" data-nav-link>store</a>
+          </li> -->
+
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;
+
+          <li>
+            <img src="{%static 'images/user_11.png'%}" alt="" onclick="toggleMenu()">
+          </li>
+
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="{%static 'images/user_111.png'%}" alt="">
+                <!-- <h2>hello</h2> -->
+              </div>
+              <hr>
+              <a href="#" class="sub-menu-link">
+                <!-- <img src="" alt=""> -->
+                <!-- <p>edit profile</p> -->
+                <span></span>
+
+                <a href="#" class="sub-menu-link">
+                  <!-- <img src="" alt=""> -->
+                  <p>
+                    <a href="{% url 'home' %}" class="btn" data-btn>Log Out</a>
+                  </p>
+                  <span></span>
+                </a>
+            </div>
+          </div>
+    </div>
+    </ul>
+    </nav>
+
+    <!-- <a href="#" class="btn" data-btn>Log Out</a> -->
+
+    <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+      <span class="line line-3"></span>
+    </button>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+      <section class="section store" aria-labelledby="store-label" id="store">
+        <div class="container">
+          <!-- 
+          <p class="section-subtitle">Enjoy The Games</p>
+
+          <h1 class="h1 title hero-title">Epic Games Made For <br> True Gamers!</h1>
+
+          <a href="#" class="btn" data-btn>Join With Us</a> -->
+          <!-- <h2>Treading Games</h2> -->
+          <!-- Swiper -->
+          <br><br>
+          <span><img src="{%static 'images/firehot.png'%}" alt=""></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="xyz">
+            <h2>HOT</h2>
+          </div>
+          <br><br>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- <div class="swiper-slide"><img src="{%static 'images/bgmi.webp'%}" alt=""></div> -->
+              <!-- <div class="swiper-slide"><img src="{%static 'images/cyberpunk.webp'%}" alt=""></div> -->
+              <div class="swiper-slide"><img src="{%static 'images/fortnite.webp'%}" alt=""></div>
+              <div class="swiper-slide"><img src="{%static 'images/godofwar.webp'%}" alt=""></div>
+              <div class="swiper-slide"><img src="{%static 'images/gtav.webp'%}" alt=""></div>
+              <div class="swiper-slide"><img src="{%static 'images/minecraft.webp'%}" alt=""></div>
+              <div class="swiper-slide"><img src="{%static 'images/GTA-6.webp'%}" alt=""></div>
+              <!-- <div class="swiper-slide"><img src="" alt=""></div>  -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- HOT<section class="section store" aria-labelledby="store-label" id="store">
+            <div class="container">
+               -->
+          <!-- Swiper -->
+          <!-- <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div> -->
+
+          <section class="section store" aria-labelledby="store-label" id="store">
+            <div class="container">
+              <h2>Play Games</h2>
+              <br><br>
+              <div class="swiperslide Swiper">
+                <div class="swiper-wrapper">
+                  <!-- slide 1 -->
+                   <div class="swiper-slide">
+                      <img src="{%static 'images/Screenshot.png'%}" alt="">
+                      <a href="{% url 'blockdude' %}" class="btn" data-btn> Block Dude</a>
+                  </div>
+
+                  <!-- slide 2 -->
+                  <div class="swiper-slide">
+                    <img src="{%static 'images/unruly-tower.webp'%}" alt="">
+                      <a href="{% url 'game2' %}" class="btn" data-btn> Unruly Tower </a>
+                  </div>
+
+                  <!-- slide 3 -->
+                  <div class="swiper-slide">
+                    <img src="{%static 'images/stick hero.webp'%}" alt="">
+                      <a href="{% url 'game3' %}" class="btn" data-btn> Stick Hero </a>
+                  </div>
+
+                  <!-- slide 4 -->
+                  {% comment %} <div class="swiper-slide">
+                    <img src="{%static 'images/flappy.webp'%}" alt="">
+                      <a href="{% url 'game1' %}" class="btn" data-btn> Super Mario </a>
+                  </div> {% endcomment %}
+
+                  <!-- slide 5 -->
+                  <div class="swiper-slide">
+                    <img src="{%static 'images/flappy.webp'%}" alt="">
+                      <a href="{% url 'game4' %}" class="btn" data-btn> Flappy Bird </a>
+                  </div>
+
+                  <!-- slide 6 -->
+                  <!-- <div class="swiper-slide"> 
+                        <div class="box">
+                          <img src="pac-man.jpg" alt="">
+                          <div class="box-text">
+                            <h2>Pac-man</h2>
+                            <h3>Online</h3>
+                          </div>
+                        </div>
+                      </div> -->
+                  <!-- <div class="swiper-slide"><img src="pac-man.jpg" alt=""></div> -->
+                  <!-- <div class="swiper-slide"><img src="pac-man.jpg" alt=""></div> -->
+                  <!-- <div class="swiper-slide"><img src="pac-man.jpg" alt=""></div> -->
+                  <!-- <div class="swiper-slide">Slide 7</div> -->
+                  <!-- <div class="swiper-slide">Slide 8</div> -->
+                  <!-- <div class="swiper-slide">Slide 9</div> -->
+                </div>
+                <div class="swiper-paginations"></div>
+              </div>
+    </article>
+  </main>
+
+
+  <!-- 
+        - #NEWS
+      -->
+
+  <section class="section news" aria-label="our latest news" id="news">
+    <div class="container">
+
+      <p class="section-subtitle" data-reveal="bottom">What's On Our Mind</p>
+
+      <h2 class="h2 section-title" data-reveal="bottom">
+        News And <span class="span">Headlines</span>
+      </h2>
+
+      <p class="section-text" data-reveal="bottom">
+        Our success in creating business solutions is due in large part to our talented and highly committed team.
+      </p>
+
+      <ul class="news-list">
+
+        <li data-reveal="bottom">
+          <div class="news-card">
+
+            <figure class="card-banner img-holder" style="--width: 600; --height: 400;">
+              <img src="{%static 'images/news-1.jpg'%}" width="600" height="400" loading="lazy"
+                alt="Innovative Business All Over The World." class="img-cover">
+            </figure>
+
+            <div class="card-content">
+
+              <a href="#" class="card-tag">Business</a>
+
+              <ul class="card-meta-list">
+
+                <li class="card-meta-item">
+                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                  <time class="card-meta-text" datetime="2022-01-01">Jan 01 2022</time>
+                </li>
+
+                <li class="card-meta-item">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                  <p class="card-meta-text">Elliot Alderson</p>
+                </li>
+
+              </ul>
+
+              <h3 class="h3">
+                <a href="#" class="card-title">Innovative Business All Over The World.</a>
+              </h3>
+
+              <p class="card-text">
+                Financial experts support or help you to to find out which way you can raise your funds more...
+              </p>
+
+              <a href="#" class="link has-before">Read More</a>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li data-reveal="bottom">
+          <div class="news-card">
+
+            <figure class="card-banner img-holder" style="--width: 600; --height: 400;">
+              <img src="{%static 'images/news-2.jpg'%}" width="600" height="400" loading="lazy"
+                alt="How To Start Initiating An Startup In Few Days." class="img-cover">
+            </figure>
+
+            <div class="card-content">
+
+              <a href="#" class="card-tag">Startup</a>
+
+              <ul class="card-meta-list">
+
+                <li class="card-meta-item">
+                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                  <time class="card-meta-text" datetime="2022-01-01">Jan 01 2022</time>
+                </li>
+
+                <li class="card-meta-item">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                  <p class="card-meta-text">Elliot Alderson</p>
+                </li>
+
+              </ul>
+
+              <h3 class="h3">
+                <a href="#" class="card-title">How To Start Initiating An Startup In Few Days.</a>
+              </h3>
+
+              <p class="card-text">
+                Financial experts support or help you to to find out which way you can raise your funds more...
+              </p>
+
+              <a href="#" class="link has-before">Read More</a>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li data-reveal="bottom">
+          <div class="news-card">
+
+            <figure class="card-banner img-holder" style="--width: 600; --height: 400;">
+              <img src="{%static 'images/news-3.jpg'%}" width="600" height="400" loading="lazy"
+                alt="Financial Experts Support Help You To Find Out." class="img-cover">
+            </figure>
+
+            <div class="card-content">
+
+              <a href="#" class="card-tag">Finance</a>
+
+              <ul class="card-meta-list">
+
+                <li class="card-meta-item">
+                  <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                  <time class="card-meta-text" datetime="2022-01-01">Jan 01 2022</time>
+                </li>
+
+                <li class="card-meta-item">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                  <p class="card-meta-text">Elliot Alderson</p>
+                </li>
+
+              </ul>
+
+              <h3 class="h3">
+                <a href="#" class="card-title">Financial Experts Support Help You To Find Out.</a>
+              </h3>
+
+              <p class="card-text">
+                Financial experts support or help you to to find out which way you can raise your funds more...
+              </p>
+
+              <a href="#" class="link has-before">Read More</a>
+
+            </div>
+
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="section footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="{%static 'images/logo.svg'%}" width="150" height="73" loading="lazy" alt="Unigine logo">
+          </a>
+
+          <p class="footer-text">
+            Our success in creating business solutions is due in large part to our talented and highly committed team.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-list">
+
+          <p class="title footer-list-title has-after">Usefull Links</p>
+
+          <ul>
+
+            <li>
+              <a href="#" class="footer-link">Tournaments</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Help Center</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Privacy and Policy</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms of Use</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact Us</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-list">
+
+          <p class="title footer-list-title has-after">Contact Us</p>
+
+          <div class="contact-item">
+            <span class="span">Location:</span>
+
+            <address class="contact-link">
+               E-160 South City
+               Lucknow (UP)
+               226025 India 
+            </address>
+          </div>
+
+          <div class="contact-item">
+            <span class="span">Join Us:</span>
+
+            <a href="idfake0104@gmail.com" class="contact-link">idfake0104@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <span class="span">Phone:</span>
+
+            <a href="tel:+12345678910" class="contact-link">+91 7007937253</a>
+          </div>
+
+        </div>
+
+        <div class="footer-list">
+
+          <p class="title footer-list-title has-after">Newsletter Signup</p>
+
+          <form action="./index.html" method="get" class="footer-form">
+            <input type="email" name="email_address" required placeholder="Your Email" autocomplete="off"
+              class="input-field">
+
+            <button type="submit" class="btn" data-btn>Subscribe Now</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 codewithsadee All Rights Reserved.
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- 
+    - #CUSTOM CURSOR
+  -->
+
+  <div class="cursor" data-cursor></div>
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="{%static 'js/script.js'%}"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+  <!-- upcomming games swipers js file -->
+  <script>
+    var swiper = new Swiper(".swiperslide", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
+
+  <script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu() {
+      subMenu.classList.toggle("open-menu");
+    }
+  </script>
+
+</body>
+
+</html>
